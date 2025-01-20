@@ -1,0 +1,12 @@
+body {
+  background-color: #1a1a2e;
+  margin: 0;
+}
+
+.movie-detail {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}

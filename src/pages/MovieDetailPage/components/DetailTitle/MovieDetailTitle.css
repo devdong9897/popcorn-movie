@@ -1,0 +1,29 @@
+.detail-title {
+  display: flex;
+}
+
+.detail-title .title-img {
+  width: 1500px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.detail-title .title-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detail-title .title-contents .badge {
+  margin-left: 10px;
+}
+
+.detail-title .title-contents .contents-detail {
+  margin-top: 20px;
+}
+
+.title-contents h3 {
+  margin-top: 20px;
+}

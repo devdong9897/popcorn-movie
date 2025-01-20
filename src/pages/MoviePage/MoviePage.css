@@ -1,0 +1,87 @@
+.movie {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .movie {
+    grid-template-columns: repeat(2, 1fr); /* 화면이 중간 크기일 때는 2개씩 */
+  }
+}
+
+@media (max-width: 576px) {
+  .movie {
+    grid-template-columns: 1fr; /* 화면이 작을 때는 한 개씩 */
+  }
+}
+
+.pagination-container {
+  position: fixed; /* fixed로 설정하여 화면에 고정 */
+  bottom: 0; /* 화면 하단에 고정 */
+  left: 50%; /* 화면의 50% 위치로 이동 */
+  transform: translateX(-50%); /* 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  width: 100%; /* 100%로 넓이를 지정 */
+  padding: 10px 0; /* 위아래 여백을 추가하여 간격을 조절 */
+  background-color: #1a1a2e; /* 배경색을 추가 */
+  z-index: 100; /* 페이지네이션이 다른 콘텐츠 위로 오도록 설정 */
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 5px; /* 각 페이지 버튼 사이 간격 */
+}
+
+.page-link {
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+/* 활성 페이지 버튼 스타일 */
+.page-item.active .page-link {
+  background-color: #ffd700;
+  color: white;
+  font-weight: bold;
+  border-color: #ffd700;
+}
+
+/* hover 상태 */
+.page-link:hover {
+  background-color: #f8d102;
+  color: white;
+}
+
+/* 이전/다음 버튼 스타일 */
+.page-item.disabled .page-link {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* 페이지 범위(...) 스타일 */
+.page-item.break {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 10px;
+  color: #333;
+}

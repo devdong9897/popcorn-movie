@@ -1,0 +1,13 @@
+.slide {
+  margin: 50px 0;
+}
+
+.movie-slider {
+  display: flex;
+  margin-left: 10px;
+}
+
+.carousel-container {
+  overflow: hidden;
+  height: 440px;
+}
