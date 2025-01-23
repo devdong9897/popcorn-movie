@@ -6,7 +6,6 @@ import MovieSlide from "../../../../common/MovieSlide/MovieSlide";
 
 const TopRatedSlide = () => {
   const { data, isLoading, isError, error } = useMoviePopularQuery();
-  console.log("top", data);
 
   if (isLoading) {
     return (

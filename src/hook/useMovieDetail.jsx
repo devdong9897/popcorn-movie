@@ -5,6 +5,7 @@ const fetchMovieDetail = (id) => {
   return api.get(`/movie/${id}`, {
     params: {
       language: "ko-KR",
+      certification_lte: "PG-13",
     },
   });
 };

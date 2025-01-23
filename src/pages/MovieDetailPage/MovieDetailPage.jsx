@@ -13,7 +13,6 @@ const MovieDetailPage = () => {
   const { id } = useParams();
 
   const { data, isLoading, isError, error } = useMovieDetailQuery(id);
-  console.log("detail", data);
 
   const { data: movieVideo } = useMovieVideoQuery(id);
   const movieVideoKey = movieVideo?.results[0]?.key;

@@ -6,7 +6,6 @@ import { useMovieReviewQuery } from "../../../../hook/useMovieReviews";
 const MovieReview = () => {
   const { id } = useParams();
   const { data } = useMovieReviewQuery(id);
-  console.log("reviews", data);
 
   const cleanReviewContent = (content) => {
     if (content) {

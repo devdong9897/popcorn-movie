@@ -7,8 +7,6 @@ import MovieSlide from "../../../../common/MovieSlide/MovieSlide";
 const PopularSlide = () => {
   const { data, isLoading, isError, error } = useMoviePopularQuery();
 
-  console.log("popular", data);
-
   if (isLoading) {
     return (
       <div className="spinner-area">

@@ -7,7 +7,6 @@ import "./NowPlaySlide.css";
 
 const NowPlaySlide = () => {
   const { data, isLoading, isError, error } = useMovieNowPlayQuery();
-  console.log("ddd", data);
 
   if (isLoading) {
     return (

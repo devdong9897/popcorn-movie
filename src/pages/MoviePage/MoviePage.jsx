@@ -16,12 +16,12 @@ const MoviePage = () => {
     keyword,
     page,
   });
-  console.log("aaaaa", data);
 
   const handlePageClick = ({ selected }) => {
     setPage(selected + 1);
   };
 
+  
   if (isLoading) {
     return (
       <div className="spinner-area">

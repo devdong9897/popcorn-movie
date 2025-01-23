@@ -4,7 +4,6 @@ import Badge from "react-bootstrap/Badge";
 import "./MovieDetailTitle.css";
 
 const MovieDetailTitle = ({ movie }) => {
-  console.log("dsfdf", movie);
   return (
     <div className="detail-title">
       <div className="title-img">

@@ -2,7 +2,6 @@ import React from "react";
 import "./MovieTrailer.css";
 
 const MovieTrailer = ({ movieVideo }) => {
-  console.log("movie2", movieVideo);
   return (
     <div className="movie-trailer">
       <h3>예고편</h3>
