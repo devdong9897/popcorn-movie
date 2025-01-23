@@ -70,7 +70,10 @@ const AppLayout = () => {
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
               />
-              <Button style={{ background: "#FFD700", outline: "none" }}>
+              <Button
+                style={{ background: "#FFD700", outline: "none" }}
+                onClick={searchKeyword}
+              >
                 Search
               </Button>
             </Form>
