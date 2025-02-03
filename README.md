@@ -63,6 +63,9 @@ React, Axios, React Query 등 새로운 기술을 배우면서 발생한 문제�
 영화 목록이 많을 경우 페이지네이션을 사용하여 여러 페이지로 나누어 영화 정보를 탐색할 수 있도록 했습니다. 또한, 검색 기능을 추가하여 사용자가 원하는 영화를 쉽게 찾을 수 있도록 했습니다. 이 과정을 통해 **상호작용성 높은 UI/UX 설계**와 **효율적인 데이터 페칭**에 대한 이해를 높일 수 있었습니다.
 
 ## 👀 서비스 화면
-![movieImg1](public/images/1.png)
-![movieImg2](public/images/2.png)
-![movieImg3](public/images/3.png)
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="public/images/1.png" alt="Movie Screenshot 1" width="30%" />
+  <img src="public/images/2.png" alt="Movie Screenshot 2" width="30%" />
+  <img src="public/images/3.png" alt="Movie Screenshot 3" width="30%" />
+</div>
