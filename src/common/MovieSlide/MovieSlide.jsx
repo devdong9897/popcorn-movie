@@ -21,8 +21,13 @@ const responsive = {
 
 const MovieSlide = ({ title, movies }) => {
   return (
-    <div className="slide">
-      <h2>{title}</h2>
+    <div className="py-8 px-4 sm:px-8 bg-gray-900 text-white">
+      {/* 제목 */}
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-100">
+        {title}
+      </h2>
+
+      {/* 슬라이드 */}
       <Carousel
         infinite={true}
         centerMode={true}
@@ -32,7 +37,9 @@ const MovieSlide = ({ title, movies }) => {
         className="movie-slider"
       >
         {movies.map((movie, index) => (
-          <MovieCard key={index} movie={movie} />
+          <div key={index} className="flex justify-center">
+            <MovieCard movie={movie} />
+          </div>
         ))}
       </Carousel>
     </div>

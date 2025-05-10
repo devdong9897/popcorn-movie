@@ -6,25 +6,35 @@ import MovieSlide from "../../../../common/MovieSlide/MovieSlide";
 
 const TopRatedSlide = () => {
   const { data, isLoading, isError, error } = useMoviePopularQuery();
+  console.log("popular", data);
 
   if (isLoading) {
     return (
-      <div className="spinner-area">
+      <div className="flex justify-center items-center min-h-screen">
         <Spinner
           animation="border"
           variant="danger"
           style={{ width: "5rem", height: "5rem" }}
+          className="text-red-500"
         />
       </div>
     );
   }
 
   if (isError) {
-    return <Alert variant="danger">{error.message}</Alert>;
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <Alert
+          variant="danger"
+          className="text-center px-6 py-4 rounded-lg shadow-lg bg-red-600 text-white"
+        >
+          {error.message}
+        </Alert>
+      </div>
+    );
   }
-
   return (
-    <div>
+    <div className="py-8 px-4 sm:px-8 bg-gray-800 text-white">
       <MovieSlide title="TopRated Movies" movies={data.results} />
     </div>
   );
