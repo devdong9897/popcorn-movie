@@ -34,19 +34,29 @@ const MovieCard = ({ movie }) => {
           {movie.title}
         </h3>
 
-        <div className="flex flex-wrap gap-2 mb-3 justify-center">
-          {showGenre(movie.genre_ids).map((id, index) => (
-            <Badge
-              bg="danger"
-              key={index}
-              className="text-xs sm:text-sm px-3 py-1 rounded-full"
-            >
-              {id}
-            </Badge>
-          ))}
+        <div className="flex flex-wrap gap-2 mb-3 justify-center max-h-24 overflow-y-auto">
+          {/* max-h-24로 최대 높이 제한, overflow-y-auto로 스크롤 가능하게 설정 */}
+          {showGenre(movie.genre_ids)
+            .slice(0, 4)
+            .map((id, index) => (
+              <Badge
+                bg="danger"
+                key={index}
+                className="text-xs sm:text-sm px-3 py-1 rounded-full"
+              >
+                {id}
+              </Badge>
+            ))}
+          {showGenre(movie.genre_ids).length > 4 && (
+            <div className="text-xs text-white mt-2">
+              + {showGenre(movie.genre_ids).length - 4} more
+            </div>
+          )}
         </div>
 
-        <div className="text-lg text-white mb-4 flex items-center justify-center">
+        <div className="text-lg text-white mb-2 flex items-center justify-center">
+          {" "}
+          {/* mb-4 -> mb-2로 변경 */}
           <span className="font-semibold mr-2">평점:</span>
           <span className="text-yellow-400 font-bold">
             {Math.floor(movie.vote_average)}

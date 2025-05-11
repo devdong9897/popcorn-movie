@@ -9,10 +9,10 @@ const MovieDetailTitle = ({ movie }) => {
       className="relative flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8 p-4 sm:p-8 bg-gray-900 text-white"
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.poster_path})`,
-        backgroundSize: "cover", // 이미지가 div에 맞게 커지도록 설정
-        backgroundPosition: "center", // 중앙 정렬
-        backgroundRepeat: "no-repeat", // 이미지 반복 방지
-        height: "400px", // 배경 이미지의 높이를 400px로 설정
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "400px",
       }}
     >
       {/* 어두운 오버레이 */}
@@ -28,11 +28,11 @@ const MovieDetailTitle = ({ movie }) => {
       </div>
 
       {/* 영화 정보 */}
-      <div className="title-contents flex flex-col gap-2 z-10 relative">
+      <div className="title-contents flex flex-col gap-2 sm:gap-4 z-10 relative">
         <h1 className="text-2xl sm:text-3xl font-semibold">{movie.title}</h1>
 
         {/* 장르 배지 */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           {movie.genres.map((genre, index) => (
             <Badge
               className="text-xs sm:text-sm px-3 py-1 rounded-full"
